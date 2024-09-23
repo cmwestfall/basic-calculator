@@ -16,7 +16,6 @@ let input = 0;
 numberButtons.forEach((button) => {
   button.addEventListener("click", () => {
     display.value += button.id;
-    console.log(display);
   });
 });
 
@@ -24,7 +23,10 @@ const changeNegative = (number) => {
   return "-" + number;
 };
 
-const backspace = () => {};
+// backspace button for deleting mistakes
+backspaceButton.addEventListener("click", () => {
+  display.value = display.value.toString().slice(0, -1);
+});
 
 const multiply = (num1, num2) => {
   total = num1 * num2;
