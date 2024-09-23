@@ -8,6 +8,7 @@ const divideButton = document.getElementById("divide");
 const minusButton = document.getElementById("minus");
 const plusButton = document.getElementById("plus");
 const equalButton = document.getElementById("equal");
+const clearButton = document.getElementById("clear");
 
 let total = 0;
 let input = 0;
@@ -26,6 +27,11 @@ const changeNegative = (number) => {
 // backspace button for deleting mistakes
 backspaceButton.addEventListener("click", () => {
   display.value = display.value.toString().slice(0, -1);
+});
+
+// clear button for clearing the display
+clearButton.addEventListener("click", () => {
+  display.value = "";
 });
 
 const multiply = (num1, num2) => {
